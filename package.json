@@ -1,0 +1,35 @@
+{
+  "name": "webcolumns",
+  "version": "1.0.0",
+  "description": "A columns/content manipuliation API with drag and drop capability",
+  "main": "index.js",
+  "dependencies": {
+    "inherits": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "watchify module.js -o dist/webcolumns.js  -v",
+    "build": "browserify module.js | uglifyjs -c -m --comments > dist/webcolumns.min.js && browserify module.js > dist/webcolumns.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wankdanker/webcolumns.git"
+  },
+  "keywords": [
+    "dom",
+    "web",
+    "columns",
+    "drag",
+    "drop",
+    "browser",
+    "card"
+  ],
+  "author": "Dan VerWeire",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wankdanker/webcolumns/issues"
+  },
+  "homepage": "https://github.com/wankdanker/webcolumns#readme",
+  "style": "./styles.css"
+}
