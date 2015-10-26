@@ -4,7 +4,7 @@
   "description": "A columns/content manipuliation API with drag and drop capability",
   "main": "index.js",
   "dependencies": {
-    "inherits": "^2.0.1"
+    "web-object": "^1.0.0"
   },
   "devDependencies": {},
   "scripts": {
