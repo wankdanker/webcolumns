@@ -193,23 +193,21 @@ function Card (opts) {
 		title.innerHTML = opts.title;
 		body.innerHTML = opts.body + '<hr>';
 		
-
 		body.appendChild(btn);
 		btn.innerHTML = '<-';
 		btn.onclick = function (e) {
-			//console.log(node.parent);
-			node.move('index', node.parent.index - 1);
+			node.move(node.parent.parent.getObjectByIndex(node.parent.getIndex() - 1));
 		};
 		
 		body.appendChild(btn2);
 		btn2.innerHTML = '->';
 		btn2.onclick = function (e) {
 			//console.log(node.parent);
-			node.move('index', node.parent.index + 1);
+			node.move(node.parent.parent.getObjectByIndex(node.parent.getIndex() + 1));
 		};
 		
-		node.on('moved', function (dest) {
-			//console.log('moved', arguments);
+		node.on('move', function (dest) {
+			console.log('move', arguments);
 			
 			addClass(node.root, 'animated');
 			addClass(node.root, 'shake');
